@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  </head>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <body>
+    <div id="title-bar">
+      <p class="title-text">ServCord Client</p>
+      <button id="close-btn">✕</button>
+    </div>
+    <div class="content"> 
+      <p>Select A Server</p>
+      <input type="text" id="servertext" class="servertext" placeholder="Server IP here"></input>
+      <select class="serverbox" id="serverbox" name="servers" size=10>
+  
+      </select>
+      <button id="startbutton" class="startbutton">Launch Discord</button>
+      <button id="clearhistory" class="errorbutton">Clear History</button>
+    </div> 
+  </body>
+</html>

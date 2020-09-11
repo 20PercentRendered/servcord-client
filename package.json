@@ -1,0 +1,27 @@
+{
+  "name": "servcord-client",
+  "version": "1.0.0",
+  "description": "Self hostable Discord Server Client",
+  "main": "main.js",
+  "dependencies": {
+    "electron-json-config": "^1.5.3"
+  },
+  "build": {
+    "appId": "servcord.client",
+    "productName": "ServCord Client",
+    "linux": {
+      "category": "public.app-category.social-networking"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^22.8.0",
+    "electron": "^10.1.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -wl"
+  },
+  "author": "",
+  "license": "MIT"
+}

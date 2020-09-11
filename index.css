@@ -1,0 +1,110 @@
+p {text-align: center; color: white; user-select: none;}
+html, body {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: 0;
+    background-color: #2f3136; 
+    box-sizing: content-box;
+}
+.content {
+    background-color: #2f3136; 
+    position: relative; 
+    text-align: center; 
+    display:grid; 
+    margin: 8px !important;
+    padding: 8px !important;
+    grid-template-rows: 1
+}
+.startbutton {
+    background-color: limegreen;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    position: relative;
+    outline: 0;
+    transition-duration: 0.4s;
+}
+.startbutton:hover {
+    background-color: green; 
+}
+.startbutton:active {
+    background-color: limegreen;
+}
+.errorbutton {
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    position: relative;
+    outline: 0;
+    transition-duration: 0.4s;
+}
+.errorbutton :hover {
+    background-color: red; 
+}
+.errorbutton :active {
+    background-color: darkred;
+}
+.servertext {
+    background-color: #202225;
+    resize: none; 
+    border: none;
+    color: white;
+    outline: 0;
+}
+.serverbox {
+    margin-top: 5%;
+    background-color: #202225;
+    border: none;
+    resize: none; 
+    color: white;
+    position: relative;
+    outline: 0;
+    overflow: hidden;
+}
+.title-text {
+    text-align: start;
+    font-size: 75%;
+    position: fixed;
+    user-select: none;
+    margin: 0;
+    margin-left: 1%;
+    padding: none;
+    color: white;
+}
+#title-bar {
+    -webkit-app-region: drag;
+    height: 18px; 
+    width: 100%;
+    background-color: #202225;
+    padding: none;
+    margin: 0px; 
+}
+#close-btn {
+    background-color: transparent;
+    border: none;
+    resize: none; 
+    padding-bottom: -3;
+    outline: 0;
+    color: gray;
+    -webkit-app-region: no-drag;
+    float: right;
+    transition-duration: 0.2s;
+}
+#close-btn:hover {
+    background-color: red;
+}
+#close-btn:active {
+    background-color: darkred;
+}
