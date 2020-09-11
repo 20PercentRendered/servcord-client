@@ -13,3 +13,8 @@ The client for the self-hostable Discord server. Works on Windows and Linux.
 Type the ip you want to connect to into the IP Address field and hit `Start Discord`
 
 Alternatively, start it with `--server IP.HERE` to directly connect to a server.
+
+## Building
+1. Clone the repo
+2. `npm i`
+3. `npm start`
