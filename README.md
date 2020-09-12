@@ -2,11 +2,11 @@
 The client for the self-hostable Discord server. Works on Windows and Linux.
 
 ## Install Instructions Windows
-1. Download and install discord.
+1. Download and install Discord.
 2. Download and install the ServCord Client.
 
 ## Install Instructions Linux
-1. Download and install discord so it is accessible anywhere using `discord`
+1. Download and install Discord so it is accessible anywhere using `discord`
 2. Download and install the ServCord Client.
 
 ## Usage
