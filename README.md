@@ -1,11 +1,13 @@
 # ServCord Client
-The client for the self-hostable Discord server. Works on Windows and Linux.
+A Discord "client" that applies hosts overrides for the discord executable. 
+Primarily intended for ServCord.
+Works on Windows and Linux.
 
-## Install Instructions Windows
+## Install Instructions (Windows)
 1. Download and install Discord.
 2. Download and install the ServCord Client.
 
-## Install Instructions Linux
+## Install Instructions (Linux)
 1. Download and install Discord so it is accessible anywhere using `discord`
 2. Download and install the ServCord Client.
 
