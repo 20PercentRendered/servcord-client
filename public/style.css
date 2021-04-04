@@ -1,3 +1,23 @@
-.app {
-  color: grey;
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.app-mount {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+html[data-theme='black'] .app-mount {
+  background: #000;
+  filter: invert(1) hue-rotate(180deg)
+}
+html[data-theme='dark'] .app-mount {
+  background: #161616;
+  filter: invert(1) hue-rotate(180deg)
+}
+html[data-theme='black'] img {
+  filter: invert(1) hue-rotate(180deg)
 }

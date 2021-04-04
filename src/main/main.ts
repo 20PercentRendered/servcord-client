@@ -1,9 +1,5 @@
-/**
- * Entry point of the Election app.
- */
 import * as path from 'path';
 import * as url from 'url';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserWindow, app } from 'electron';
 
 let mainWindow: Electron.BrowserWindow | null;
@@ -15,10 +11,9 @@ function createWindow(): void {
     width: 800,
     webPreferences: {
       webSecurity: false,
-      devTools: process.env.NODE_ENV !== 'production',
     },
   });
-
+  mainWindow.setMenuBarVisibility(false);
   // and load the index.html of the app.
   mainWindow.loadURL(
     url.format({
