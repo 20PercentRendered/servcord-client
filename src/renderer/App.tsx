@@ -15,7 +15,7 @@ export default class App extends React.Component {
         <GuildSidebar guilds={[
           {
             id: 'placeholder', 
-            icon: 'https://raw.githubusercontent.com/20PercentRendered/servcord-client/new-client/src/resources/placeholderIcon.png', 
+            icon: 'https://raw.githubusercontent.com/20PercentRendered/servcord-client/new-client/src/assets/placeholderIcon.png', 
             name: 'Placeholder',
           },
         ]}
