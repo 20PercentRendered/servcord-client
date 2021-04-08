@@ -6,11 +6,13 @@ let mainWindow: Electron.BrowserWindow | null;
 
 function createWindow(): void {
   // Create the browser window.
+  app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required'); 
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
     webPreferences: {
-      webSecurity: false,
+      // webSecurity: false,
+      nodeIntegration: true,
     },
   });
   mainWindow.setMenuBarVisibility(false);

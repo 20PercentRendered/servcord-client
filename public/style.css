@@ -1,3 +1,8 @@
+:root {
+	--primary-color: red;
+	--secondary-color: orange;
+	--tertiary-color: yellow;
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -9,15 +14,44 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
+  background: var(--primary-color);
 }
-html[data-theme='black'] .app-mount {
-  background: #000;
-  filter: invert(1) hue-rotate(180deg)
+.tree {
+  display: flex;
+  height: 100%;
+	padding: 0;
 }
-html[data-theme='dark'] .app-mount {
-  background: #161616;
-  filter: invert(1) hue-rotate(180deg)
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  width: 72px;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--tertiary-color);
+	align-items: center;
+	padding: 0;
 }
-html[data-theme='black'] img {
-  filter: invert(1) hue-rotate(180deg)
+.guilds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+	  padding: 0;
+}
+.guildButton {
+  background-color: var(--secondary-color);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: '48px';
+  height: '48px';
+  border: 2px solid transparent;
+}
+.guildButton :hover {
+  border: 2px solid green;
+}
+*, *::after, *::before {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
 }

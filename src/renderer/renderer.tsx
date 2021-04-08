@@ -3,33 +3,29 @@
  */
 // Import the styles here to process them with webpack
 import '_public/style.css';
-import '_public/spinkit.css';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { LoadingWave } from './loadingIcons';
+import ThemeManager from './modules/ThemeManager';
+import WindowGlobals from './windowGlobalManager';
+import GuildSidebar from './elements/GuildSidebar';
+import { GuildIconButton } from './elements/GuildButton';
+import ConnectionManager from './modules/ConnectionManager';
+import App from './App';
 
-function setTheme(theme: string) {
-  document.getElementsByTagName('html')[0].dataset.theme = theme;
-}
-function setDarkTheme() {
-  setTheme('dark');
-}
-function setBlackTheme() {
-  setTheme('black');
-}
-function setLightTheme() {
-  setTheme('light');
-}
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+const Spinner = require('react-spinkit');
+// do not convert to import, it will break
+/* eslint-enable @typescript-eslint/no-var-requires */
+/* eslint-enable @typescript-eslint/no-unsafe-assignment */
+
+WindowGlobals.set('ThemeManager', new ThemeManager());
+WindowGlobals.set('ConnectionManager', new ConnectionManager());
 ReactDOM.render(
-  <div className="app-mount">
-    <LoadingWave />
-    <button onClick={setDarkTheme} type="button">Dark</button>
-    <button onClick={setBlackTheme} type="button">Black</button>
-    <button onClick={setLightTheme} type="button">Light</button>
-  </div>,
+  <App />,
   document.getElementById('app-mount'),
   () => {
-    setLightTheme();
+    WindowGlobals.get<ThemeManager>('ThemeManager').SetDarkTheme();
   },
 );
