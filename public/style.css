@@ -2,7 +2,7 @@
 	--primary-color: red;
 	--secondary-color: orange;
 	--tertiary-color: yellow;
-  --selected-color: rgb(13, 85, 162);
+  --selected-color: #6473a8;
 }
 html, body {
   width: 100%;
