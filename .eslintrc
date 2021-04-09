@@ -77,7 +77,9 @@
         // I felt like disabling it
         "no-trailing-spaces": "off",
         // need for private properties
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        // for the windows users
+        "linebreak-style": "off"
       }
     }
   ]
