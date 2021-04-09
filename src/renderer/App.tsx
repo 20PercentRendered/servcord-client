@@ -21,15 +21,6 @@ export default class App extends React.Component {
         ]}
         >
           <GuildButton
-            style={
-            { 
-              padding: 0,
-              width: '48px',
-              borderRadius: '50%',
-              height: '48px',
-              backgroundColor: '#292b2e',
-            }
-          }
             onClick={() => { Logger.default.info('onClick() settings'); }}
           >
             <svg
@@ -44,15 +35,6 @@ export default class App extends React.Component {
             </svg>
           </GuildButton>
           <GuildButton
-            style={
-            { 
-              padding: 0,
-              width: '48px',
-              borderRadius: '50%',
-              height: '48px',
-              backgroundColor: '#292b2e',
-            }
-          }
             onClick={() => { Logger.default.info('onClick() add guild'); }}
           >
             <svg

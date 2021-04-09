@@ -2,6 +2,7 @@
 	--primary-color: red;
 	--secondary-color: orange;
 	--tertiary-color: yellow;
+  --selected-color: rgb(13, 85, 162);
 }
 html, body {
   width: 100%;
@@ -32,26 +33,36 @@ html, body {
 	padding: 0;
 }
 .guilds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-	  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+	padding: 0;
+}
+*, *::after, *::before {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
 }
 .guildButton {
   background-color: var(--secondary-color);
   align-items: center;
   display: flex;
   justify-content: center;
-  width: '48px';
-  height: '48px';
-  border: 2px solid transparent;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  outline: none;
+  align-items: center;
+  transition: all 0.25s;
 }
-.guildButton :hover {
-  border: 2px solid green;
+.guildButton:hover, .guildButton:focus, .guildButton:active {
+  border-radius: 35%;
+  background-color: var(--selected-color);
 }
-*, *::after, *::before {
-	-webkit-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-app-region: no-drag;
+.guildIconButton:hover, .guildIconButton:focus, .guildIconButton:active {
+  border-radius: 35%;
+  background-color: transparent;
 }

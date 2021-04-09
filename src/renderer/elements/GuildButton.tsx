@@ -6,7 +6,7 @@ type GuildIconButtonProps = {
   name: string
   id: string
   server?: Server
-  onClick?: React.MouseEventHandler
+  onClick?: React.EventHandler<any>
 }
 // eslint-disable-next-line spaced-comment
 //TODO: make deform effect
@@ -14,22 +14,7 @@ export class GuildIconButton extends React.Component<GuildIconButtonProps> {
   render() {
     const { iconSrc, name, onClick } = this.props;
     return (
-      <button
-        type="button"
-        style={{
-          display: 'flex',
-          padding: 0,
-          border: 0,
-          marginBottom: 8,
-          width: '48px',
-          height: '48px',
-          outline: 'none',
-          alignItems: 'center',
-          background: 'transparent',
-        }}
-        className="guildIconButton guildButton"
-        onClick={onClick}
-      >
+      <GuildButton className="guildIconButton" onClick={onClick}>
         <img
           src={iconSrc}
           alt={name}
@@ -44,36 +29,41 @@ export class GuildIconButton extends React.Component<GuildIconButtonProps> {
             }
           }
         />
-      </button>
+      </GuildButton>
     );
   }
 }
 type GuildButtonProps = {
-  style?: React.CSSProperties
-  onClick?: React.MouseEventHandler
+  onClick?: React.EventHandler<any>
+  className?: string
 }
 export class GuildButton extends React.Component<GuildButtonProps> {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { children, style, onClick } = this.props;
+    const { children, onClick, className } = this.props;
     return (
-      <button
-        type="button"
-        style={{
-          padding: 0,
-          border: 0,
-          marginBottom: 8,
-          outline: 'none',
-          alignItems: 'center',
-          background: 'transparent',
-        }}
-        className="guildButton"
+      <div
+        role="button"
+        tabIndex={0}
+        className={(() => {
+          if (className) {
+            return `guildButton ${className}`;
+          } 
+          return 'guildButton';
+        })()}
         onClick={onClick}
+        onKeyUp={(ev) => {
+          if (ev.key === 'enter') {
+          // Cancel the default action, if needed
+            ev.preventDefault();
+            if (onClick) {
+              onClick(ev);
+            }
+          }
+        }}
       >
-        <div style={style} className="guildButton">
-          {children}
-        </div>
-      </button>
+        {children}
+      </div>
     );
   }
 }

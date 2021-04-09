@@ -11,6 +11,11 @@
       "_renderer/*": ["src/renderer/*"],
       "_utils/*": ["src/utils/*"]
     },
+    "plugins": [
+      { 
+        "name": "typescript-plugin-css-modules" 
+      }
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
