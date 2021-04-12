@@ -3,6 +3,9 @@
 	--secondary-color: orange;
 	--tertiary-color: yellow;
   --selected-color: #6473a8;
+  --channels-default: #b3bbc4;
+  --text-normal: white;
+  --text-input-border: rgba(0, 0, 0, 0.63);
 }
 html, body {
   width: 100%;
@@ -15,7 +18,12 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: var(--primary-color);
+}
+.fill {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 .tree {
   display: flex;
@@ -65,4 +73,19 @@ html, body {
 .guildIconButton:hover, .guildIconButton:focus, .guildIconButton:active {
   border-radius: 35%;
   background-color: transparent;
+}
+.error {
+  color: red;
+  border-color: red;
+}
+.header {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.loginContainer {
+  position: relative;
+  height: 50%;
+  width: 30%;
+  display: grid;
+  place-items: center;
 }

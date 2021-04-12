@@ -37,7 +37,7 @@ export default class ThemeManager {
 
   SetBlackTheme(): void {
     this.setTheme({
-      name: 'dark',
+      name: 'black',
       primaryColor: 'black',
       secondaryColor: 'black',
       tertiaryColor: 'black',
