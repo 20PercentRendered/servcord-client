@@ -74,13 +74,13 @@ html, body {
   border-radius: 35%;
   background-color: transparent;
 }
-.error {
-  color: red;
-  border-color: red;
-}
 .header {
   font-weight: 600;
   text-transform: uppercase;
+  color: gray;
+}
+.header.error {
+  color: red;
 }
 .loginContainer {
   position: relative;
@@ -88,4 +88,26 @@ html, body {
   width: 30%;
   display: grid;
   place-items: center;
+}
+.textBox {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  transition: border-color .4s;
+  background-color: rgba(0, 0, 0, 0.17);
+  padding: 10px;
+  height: 40px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  outline: 0;
+  color: white;
+}
+.textBox:focus, .textBox:active {
+  border-color: var(--selected-color) !important;
+}
+.textBox:hover {
+  border-color:black
+}
+.textBox.error {
+  border-color: red !important;
 }

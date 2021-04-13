@@ -10,7 +10,8 @@ export default class LoginForm extends React.Component {
     return (
       <div
         style={{
-          backgroundColor: '#1c1c1c',
+          backgroundColor: '#292b2e',
+          borderRadius: '16px',
         }}
         className="fill"
       >
@@ -35,9 +36,7 @@ export default class LoginForm extends React.Component {
                 }}
                 >
                   <NamedTextBox
-                    onChange={((ev) => { 
-                      console.log(ev.target.innerHTML);
-                    })}
+                    extraClasses=""
                     name="Server Address"
                   />
                 </div>
@@ -46,9 +45,7 @@ export default class LoginForm extends React.Component {
                 }}
                 >
                   <NamedTextBox
-                    onChange={((ev) => { 
-                      console.log(ev.target.innerHTML);
-                    })}
+                    extraClasses=""
                     name="Username or Email"
                   />
                 </div>
@@ -57,10 +54,9 @@ export default class LoginForm extends React.Component {
                 }}
                 >
                   <NamedTextBox
-                    onChange={((ev) => { 
-                      console.log(ev.target.innerHTML);
-                    })}
+                    extraClasses=""
                     name="Password"
+                    type="password"
                   />
                 </div>
               </div>

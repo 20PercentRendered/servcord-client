@@ -1,9 +1,25 @@
 import * as React from 'react';
 
-class TextBoxProps {
-  disabled?: boolean;
+class TextBoxProps implements React.InputHTMLAttributes<HTMLInputElement> {
+  /**
+   * Do not set className. Use extraClasses instead.
+   * Doesn't actually throw anything. Maybe. 
+   * @throws HorriblePersonException
+   * @private
+   */
+  className?: string
+  
+  type?: string
 
-  onChange: React.ChangeEventHandler
+  /**
+   * Extra classes for this element. 
+   * Needs to be a list of classes or an empty string, 
+   * because setters cannot be optional.
+   * @readonly
+   */
+  public set extraClasses(v : string) {
+    this.className += v;
+  }
 }
 type TextBoxState = {
     value: string
@@ -18,7 +34,6 @@ export class TextBox extends React.Component<TextBoxProps, TextBoxState> {
 
   render() {
     const { value } = this.state;
-    const { onChange, disabled } = this.props;
     return (
       <div style={{
         flexGrow: 1,
@@ -27,24 +42,11 @@ export class TextBox extends React.Component<TextBoxProps, TextBoxState> {
       }}
       >
         <input
+          className="textBox"
           type="text"
-          disabled={disabled}
-          style={{
-            border: '1px solid rgba(0, 0, 0, 0.3)',
-            transition: 'border-color .2s',
-            backgroundColor: 'rgba(0, 0, 0, 0.17)',
-            padding: '10px',
-            height: '40px',
-            fontSize: '16px',
-            boxSizing: 'border-box',
-            width: '100%',
-            borderRadius: '4px',
-            outline: 0,
-            color: 'white',
-          }}
+          {... this.props}
           onChange={((ev) => {
             this.setState({ value: ev.target.value });
-            onChange(ev);
           })}
         />
       </div>
@@ -64,7 +66,7 @@ export class NamedTextBox extends React.Component<NamedTextBoxProps, TextBoxStat
 
   render() {
     const { value } = this.state;
-    const { onChange, disabled, name } = this.props;
+    const { name } = this.props;
     return (
       <div>
         <h5
@@ -77,8 +79,7 @@ export class NamedTextBox extends React.Component<NamedTextBoxProps, TextBoxStat
           {name}
         </h5>
         <TextBox
-          disabled={disabled}
-          onChange={onChange}
+          {... this.props}
         />
       </div>
     );
