@@ -42,7 +42,7 @@ export class TextBox extends React.Component<TextBoxProps, TextBoxState> {
       }}
       >
         <input
-          className="textBox"
+          className="textBox" 
           type="text"
           {... this.props}
           onChange={((ev) => {

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Button from './Button';
 import { NamedTextBox, TextBox } from './TextBox';
 
 export default class LoginForm extends React.Component {
@@ -58,6 +59,12 @@ export default class LoginForm extends React.Component {
                     name="Password"
                     type="password"
                   />
+                </div>
+                <div style={{
+                  marginBottom: '20px',
+                }}
+                >
+                  <Button>joo</Button>
                 </div>
               </div>
             </div>
